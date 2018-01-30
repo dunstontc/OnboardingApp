@@ -23,6 +23,7 @@ namespace OnboardingApp
             return Console.ReadLine();
         }
         
+        // NOTE: rather than simplify this, it would be better to use an existing library. But I don't imagine this will be a console app long enough to do that.
         public static bool AskBool(string prompt)
         {
             // Exit from program if CTL+C is pressed.
