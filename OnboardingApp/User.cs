@@ -21,7 +21,7 @@ namespace OnboardingApp
         }
 
 
-        public string FullName
+        private string FullName
         {
             get
             {
@@ -35,19 +35,14 @@ namespace OnboardingApp
         }
 
 
-        public string IsOwner()
+        private string IsOwner()
         {
             return IsAccountOwner ? "Account owner" : "Not account owner";
         }
 
-        public string getPin()
+        private string getPin()
         {
-            if (PinNumber == 4)
-            {
-                return "****";
-            }
-
-            return "This user has yet to set up a PIN numner";
+            return PinNumber.ToString().Length == 4 ? "****" : "This user has yet to set up a PIN numner";
         }
 
         public string DescribeUser()

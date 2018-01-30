@@ -2,7 +2,7 @@
 
 namespace OnboardingApp
 {
-    internal class Program
+    internal static class Program
     {
         private static void Main(string[] args)
         {
@@ -22,13 +22,6 @@ namespace OnboardingApp
             
             return Console.ReadLine();
         }
-
-//        public static string AskQuestion(string req)
-//        {
-//            var res = "";
-//
-//        }
-        
         
         public static bool AskBool(string prompt)
         {
@@ -37,7 +30,6 @@ namespace OnboardingApp
 
             ConsoleKeyInfo cki;
 
-            string res;
             var answer = false;
             var thePrompt = $"{prompt}\n(Y or N): ";
 
@@ -49,6 +41,7 @@ namespace OnboardingApp
                 cki = Console.ReadKey();
                 Console.ResetColor();
 
+                string res;
                 switch (cki.KeyChar)
                 {
                     case 'y':
